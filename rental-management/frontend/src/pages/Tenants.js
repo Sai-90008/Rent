@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { usersAPI } from '../services/api';
 import { toast } from 'react-toastify';
-import { Users, Edit2, Trash2, Plus } from 'lucide-react';
+import { Users, Edit2, Trash2 } from 'lucide-react';
 
 function Modal({ title, onClose, onSubmit, loading, children }) {
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { dashboardAPI } from '../services/api';
-import { Building2, Users, FileText, CreditCard, Wrench, TrendingUp, AlertTriangle } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Building2, Users, FileText, Wrench, TrendingUp, AlertTriangle } from 'lucide-react';
 
 const StatCard = ({ icon: Icon, label, value, color, bg }) => (
   <div className="stat-card">
@@ -31,10 +30,6 @@ export default function Dashboard() {
 
   if (loading) return <div className="loading"><div className="spinner" /></div>;
   if (!data) return <div className="empty-state"><p>Could not load dashboard</p></div>;
-
-  const chartData = [
-    { name: 'Properties', total: data.totalProperties, available: data.availableProperties, occupied: data.occupiedProperties },
-  ];
 
   return (
     <div>

@@ -104,7 +104,7 @@ export default function Payments() {
                   <tr key={p.id}>
                     <td><strong>{p.tenantName}</strong></td>
                     <td>{p.propertyName}</td>
-                    <td><strong style={{color:'var(--success)'}}>+${Number(p.amount).toLocaleString()}</strong>{p.lateFee && <div style={{fontSize:11,color:'var(--danger)'}}>Late: ${p.lateFee}</div>}</td>
+                    <td><strong style={{color:'var(--success)'}}>+Rs.{Number(p.amount).toLocaleString()}</strong>{p.lateFee && <div style={{fontSize:11,color:'var(--danger)'}}>Late: Rs.{p.lateFee}</div>}</td>
                     <td>{p.paymentDate}</td>
                     <td>{p.dueDate || '—'}</td>
                     <td>{p.method?.replace('_',' ') || '—'}</td>

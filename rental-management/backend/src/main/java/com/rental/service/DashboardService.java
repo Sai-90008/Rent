@@ -11,8 +11,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class DashboardService {
@@ -61,5 +63,6 @@ public class DashboardService {
                 .recentPayments(recentPayments)
                 .recentMaintenance(recentMaint)
                 .build();
+
     }
 }

@@ -51,7 +51,7 @@ export default function Dashboard() {
         <StatCard icon={Users} label="Total Tenants" value={data.totalTenants} color="#d97706" bg="#fef3c7" />
         <StatCard icon={AlertTriangle} label="Overdue Payments" value={data.overduePayments} color="#dc2626" bg="#fee2e2" />
         <StatCard icon={Wrench} label="Open Maintenance" value={data.openMaintenanceRequests} color="#ea580c" bg="#ffedd5" />
-        <StatCard icon={TrendingUp} label="Total Revenue" value={`$${(data.totalRevenue||0).toLocaleString()}`} color="#16a34a" bg="#dcfce7" />
+        <StatCard icon={TrendingUp} label="Total Revenue" value={`Rs.${(data.totalRevenue||0).toLocaleString()}`} color="#16a34a" bg="#dcfce7" />
       </div>
 
       <div className="dashboard-grid">
@@ -71,7 +71,7 @@ export default function Dashboard() {
                     <tr key={p.id}>
                       <td>{p.tenantName}</td>
                       <td>{p.propertyName}</td>
-                      <td><strong>${p.amount?.toLocaleString()}</strong></td>
+                      <td><strong>Rs.{p.amount?.toLocaleString()}</strong></td>
                       <td>{statusBadge(p.status)}</td>
                     </tr>
                   ))}

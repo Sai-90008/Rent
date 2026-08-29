@@ -111,7 +111,7 @@ export default function Properties() {
                     <td>{p.address}{p.city ? `, ${p.city}` : ''}</td>
                     <td><span className="badge badge-info">{TYPE_LABELS[p.type] || p.type}</span></td>
                     <td>{p.bedrooms}bd / {p.bathrooms}ba</td>
-                    <td><strong>${Number(p.rentAmount).toLocaleString()}</strong></td>
+                    <td><strong>Rs.{Number(p.rentAmount).toLocaleString()}</strong></td>
                     <td><span className={`badge badge-${STATUS_COLORS[p.status]||'secondary'}`}>{p.status}</span></td>
                     <td>
                       <div style={{ display:'flex', gap:6 }}>
